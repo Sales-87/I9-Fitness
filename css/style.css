@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+  background-color: #0d0d0d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #111111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img{
+    width: 70px;
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+
+header h1{
+    font-size: 1.5rem;
+}
+
+nav{
+    display: flex;
+    gap: 2rem;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+nav a:hover { 
+    color: #D4AF37; 
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 2rem;
+        position: relative;
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        background-color: #111111;
+        flex-direction: column;
+        gap: 0;
+        width: 180px;
+        padding: 0.5rem 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 1000;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    nav a {
+        padding: 0.9rem 1.2rem;
+    }
+}
+
+.hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+    ), url("../assets/fundo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    background-color: #D4AF37;
+    color: #111111;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #e5c04a;
+}
+
+@media (max-width: 768px){
+    .hero {
+    min-height: 75vh;
+    padding: 3rem 5%;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+}
+
+.sobre{
+    background-color: #181818;
+    color: #B8B8B8;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 5%;
+}
+
+.sobre h2{
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.sobre h3{
+    color: #D4AF37;
+}
+.sobre p{
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.destaques{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.destaques div {
+    background-color: #1F1F1F;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.destaques h3 {
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.destaques p {
+    line-height: 1.6;
+}
+@media (max-width: 768px){
+    .sobre {
+    padding: 4rem 5%;
+    }
+
+    .sobre h2 {
+        font-size: 1.8rem;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .destaques div {
+        width: 100%;
+    }
+}
+
+.planos{
+    background-color: #111111;
+    color: #ffffff;
+    min-height: 80vh;
+    text-align: center;
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.planos h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+}
+.planos h3{
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+.planos p {
+    color: #B8B8B8;
+    margin-bottom: 1rem;
+}
+.planos div {
+    background-color: #1F1F1F;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+    justify-self: center;
+    text-align: center;
+}
+.preco {
+    color: #ffffff !important;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.planos button {
+    background-color: #D4AF37;
+    color: #111111;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.planos button:hover {
+    background-color: #E5C04A;
+}
+@media (max-width: 768px) {
+    .planos {
+        padding: 4rem 5%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .planos h2 {
+        font-size: 1.8rem;
+    }
+
+    .planos > div {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.contato{
+    background-color: #181818;
+    color: #B8B8B8;
+    min-height: 80vh;
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+.contato h2{
+    grid-column: 1 / -1;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.contato div{
+    background-color: #1F1F1F;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.contato h3{
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+.contato p{
+    color: #B8B8B8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.contato button{
+    background-color: #D4AF37;
+    color: #111111;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #E5C04A;
+}
+
+@media (max-width: 768px) {
+
+    .contato {
+        grid-template-columns: 1fr;
+        padding: 4rem 5%;
+        gap: 1rem;
+    }
+
+    .contato h2 {
+        font-size: 1.8rem;
+    }
+
+    .contato div {
+        width: 100%;
+    }
+
+}
+
+footer {
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    padding: 1.5rem 5%;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    display: flex;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+footer button {
+    background-color: #D4AF37;
+    color: #111111;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+footer p {
+    color: #B8B8B8;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 5%;
+    }
+
+    footer div {
+        flex-direction: row;
+        width: auto;
+        max-width: none;
+    }
+
+    footer button {
+        width: auto;
+    }
+}
+
+/* Estado inicial dos elementos ocultos */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado ativo quando o elemento entra na tela */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #0d0d0d;
+  padding: 20px 40px;
+  transition: 0.3s;
+}
+
+header .logo img {
+  height: 50px;
+  transition: 0.3s;
+}
+
+header.shrink {
+  padding: 10px 40px;
+}
+
+header.shrink .logo img {
+  height: 35px;
+}
+
+body {
+  padding-top: 90px;
+}

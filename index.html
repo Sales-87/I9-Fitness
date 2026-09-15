@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I9 Fitness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo.png"
+    type="image/png">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <h1>I9 Fitness</h1>
+        </div>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#planos">Planos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <button class="menu-hamburguer">☰</button>
+    </header>
+
+    <section class="hero reveal">
+        <h2>FEITOS DE FORÇA E VONTADE.</h2>
+
+        <p>Na I9 Fitness, você encontra estrutura, energia e um ambiente preparado para você superar seus limites e evoluir todos os dias.</p>
+
+        <a href="https://api.whatsapp.com/send?phone=556392625163"> 
+            <button>QUERO ME MATRICULAR</button>
+        </a>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <h2 class="reveal">Conheça a I9 Fitness</h2>
+
+        <p class="reveal"> 
+            A I9 Fitness é o lugar para quem busca mais disposição, saúde e evolução. Contamos com uma estrutura preparada para oferecer um ambiente completo, confortável e motivador para os seus treinos. 
+        </p>
+
+        <div class="destaques">
+            <div class="reveal">
+                <h3>Estrutura completa</h3>
+                <p>Equipamentos e espaço preparados para seus treinos.</p>
+            </div>
+
+            <div class="reveal">
+               <h3>Ambiente motivador</h3> 
+               <p>Um espaço para você treinar com energia e determinação.</p>
+            </div>
+
+            <div class="reveal"> 
+                <h3>Foco em evolução</h3> 
+                <p>Treine no seu ritmo e busque sua melhor versão todos os dias.</p> 
+            </div>
+        </div>
+    </section>
+
+    <section class="planos" id="planos">
+        <h2 class="reveal">Escolha seu plano</h2>
+
+        <div class="reveal">
+            <h3>Mensal</h3>
+            <p class="preco">R$ 99/mês</p>
+            <p>Acesso à academia durante o período de 1 mês.</p>
+            <a href="https://api.whatsapp.com/send?phone=556392625163">
+                <button>Quero esse plano</button>
+            </a>
+        </div>
+
+        <div class="reveal">
+            <h3>Trimestral</h3>
+            <p class="preco">R$ 249/3 meses</p>
+            <p>Acesso à academia durante 3 meses.</p>
+            <a href="https://api.whatsapp.com/send?phone=556392625163">
+                <button>Quero esse plano</button>
+            </a>
+        </div>
+
+        <div class="reveal">
+            <h3>Anual</h3>
+            <p class="preco">R$ 799/ano</p>
+            <p>Acesso à academia durante 12 meses.</p>
+            <a href="https://api.whatsapp.com/send?phone=556392625163">
+                <button>Quero esse plano</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2 class="reveal">ENTRE EM CONTATO</h2>
+        
+        <div class="reveal">
+            <h3>Endereço</h3>
+            <p>Av: senhora de Fátima</p>
+        </div>
+
+        <div class="reveal">
+            <h3>Horário de funcionamento</h3>
+            <p>
+                Segunda a Sexta<br>
+                06h às 12:00<br>
+                14:00 às 22:00<br>
+                Sábado<br>
+                07h às 12:00
+            </p>
+        </div>
+
+        <div class="reveal">
+            <h3>Whatsapp</h3>
+            <a href="https://api.whatsapp.com/send?phone=556392625163">
+                <button>Entre em Contato</button>
+            </a>
+        </div>
+
+        <div class="reveal">
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/i9fitness.to/">
+                <button>Instagram</button>
+            </a>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <h3>I9 Fitness</h3>
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=556392625163">
+                <button>Whatsapp</button>
+            </a>
+
+            <a href="https://www.instagram.com/i9fitness.to/">
+                <button>Instagram</button>
+            </a>
+        </div>
+
+        <p>© 2026 I9 Fitness — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      function revealOnScroll() {
+        const reveals = document.querySelectorAll('.reveal');
+
+        for (let i = 0; i < reveals.length; i++) {
+          const windowHeight = window.innerHeight;
+          const elementTop = reveals[i].getBoundingClientRect().top;
+          const elementVisible = 100;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+          }
+        }
+      }
+
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
